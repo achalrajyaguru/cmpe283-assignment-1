@@ -159,7 +159,84 @@ It will open a menu. Usually this menu is correct but you want to make sure that
 
 - make all
 
-Following these steps has helped me get the results, I have mentioned the 3 big errors which i faced, the libraries which we have installed will help us avoid any future error which i faced during setup
+Following these steps has helped me get the results, I have mentioned the 3 big errors which i faced, the libraries which we have installed will help us avoid any future error which i faced during setup and hopefully you wont see them in your system, if you do then google the last 2 lines of the error and you will probably find a solution easily. The Linux community is very big :-)
+
+Step-5 : Coding in C which will help us see the functionalities of MSRs
+
+You can copy paste the code from this repo into your own c file with the below code
+
+- gedit <file_name>.c
+
+This will open up a text file where you can copy paste the code that i have used. 
+
+You can also clone my Assignment 1 Github repo into a different folder and cut+paste the code from my repo. You can use the below code
+
+- cd 
+(This will exit you from the linux repo and bring you to base)
+
+- cd Downloads
+(Here, you can clone my github repo)
+
+- git clone https://github.com/achalrajyaguru/cmpe283-assignment-1.git
+
+Navigate to the Assignment-1 folder and copy paste the .c file into the linux folder. This will save you more time. By the time this read me is live, tehre will be the linux file as well which will make it a big file to download and might take up space if your try to access it from the GCP so you might run into an out of storage error if your VM is running low on memory so keep that in mind. To avoid this you can also directly download the c code and make file along with the diff file from the git repo.
+
+Step-6: Creating a kernel module to run MSRs
+
+Here, we need to create a Makefile for our kernel. To create it type 
+
+- gedit Makefile
+
+Here, we need to make sure that we are pointing to the object file of the c code. After creating it, paste the make code and save it in the same folder, if there is already a makefile then system will show an error of existing file, just select replace and continue.
+
+Just like c code it will be much faster to download the make file seperately from the git repo.
+
+https://github.com/achalrajyaguru/cmpe283-assignment-1.git
+
+Step-7 :
+
+Here, we need to load the specific kernel module into our kernel. To do so, type the following code
+
+- insmod./msrscode.ko
+
+Step-8: 
+
+Now we need to verify the output from the kernel in the system message log. It is bassically the output for the modules that we ran through our c code. 
+
+- dmseg
+
+This will give us our output in the terminal window which we can then use and verify through the homework pdf that is labeled as Assignment 1.pdf in the Assignment 1 folder in our repo. 
+
+Step-9: Creating a diff file
+
+We create a diff file inorder to compare changes from our original file and new file. They are widely used to get difference between the original file and the updated file.
+
+- git diff HEAD~1 > msrscode.diff
+Step-10: Pusing the code to github
+
+Here you can use an external software like GitKraken or Source tree to push the code. The easiest way I have found is to push it with terminal.
+
+- git clone https://github.com/achalrajyaguru/cmpe283-assignment-1.git
+- git init
+- git add .
+- git status
+- git commit -m "Your Message"
+- git status
+- git push
+
+If you have made any changes in the git website simultaneously, then make a pull request by using below code
+
+- git pull
+
+This will help you avoid any merge conflicts.	
+
+
+That's all for this assignment, if you face any errors then you can contact me on my linkedin page and shoot me a text, I will try to help if I can. What I would recommend is to google the error code first. In linux, if you face an error then there is a 80% chance that the solution is already available on the internet because of how big the community is :-)
+
+
+
+
+
 
 
 
