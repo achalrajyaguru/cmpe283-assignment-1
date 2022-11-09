@@ -29,3 +29,9 @@
 #define IA32_VMX_TRUE_ENTRY_CTLS 0x490
 
 
+// writing code to report capability
+
+struct capability_info {
+	uint8_t bit;
+	const char *name;
+};
