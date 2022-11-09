@@ -237,6 +237,14 @@ This will help you avoid any merge conflicts.
 
 That's all for this assignment, if you face any errors then you can contact me on my linkedin page and shoot me a text, I will try to help if I can. What I would recommend is to google the error code first. In linux, if you face an error then there is a 80% chance that the solution is already available on the internet because of how big the community is :-)
 
+#### References 
+
+I took references from my seniors who took this class before and referenced the lecture videos of Prof. M Larkin from San Jose State University
+
+https://github.com/AnshulPatni/CMPE-283/tree/master/Assignment%201
+
+https://github.com/NeelakantaBhagavatula/linux
+
 
 
 
