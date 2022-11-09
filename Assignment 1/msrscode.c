@@ -120,4 +120,42 @@ struct capability_info entry[9] =
 	{ 17, "Conceal VM entries from Intel PT" }
 };
 
+// adding exit controls
 
+struct capability_info exit[11] =
+{
+	{ 2, "Save debug controls" },
+	{ 9, "Host addressspace size" },
+	{ 12, "Load IA32_PERF_GLOB AL_CTRL" },
+	{ 15, "Acknowledge interrupt on exit" },
+	{ 18, "Save IA32_PAT" },
+	{ 19, "Load IA32_PAT" },
+	{ 20, "Save IA32_EEFR" },
+	{ 21, "Load IA32_EFER" },
+	{ 22, "Save VMXpreemption timer value" },
+	{ 23, "Clear IA32_BNDCFGS" },
+	{ 24, "Conceal VM exits from Intel PT" },
+};
+
+
+// code to generate required yes/ no output
+
+void
+report_capability(struct capability_info *cap, uint8_t len, uint32_t lo,
+    uint32_t hi)
+{
+	uint8_t i;
+	struct capability_info *c;
+	char msg[MAX_MSG];
+
+	memset(msg, 0, sizeof(msg));
+
+	for (i = 0; i < len; i++) {
+		c = &cap[i];
+		snprintf(msg, 79, "  %s: Can set=%s, Can clear=%s\n",
+		    c->name,
+		    (hi & (1 << c->bit)) ? "Yes" : "No",
+		    !(lo & (1 << c->bit)) ? "Yes" : "No");
+		printk(msg);
+	}
+}
