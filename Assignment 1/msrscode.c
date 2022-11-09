@@ -159,3 +159,97 @@ report_capability(struct capability_info *cap, uint8_t len, uint32_t lo,
 		printk(msg);
 	}
 }
+
+//prionting vmx features
+
+void
+detect_vmx_features(void)
+{
+	uint32_t lo, hi;
+	
+	rdmsr(IA32_VMX_BASIC_CTLS, lo, hi);
+	pr_info("Basic Controls MSR: 0x%llx\n",
+		(uint64_t)(lo | (uint64_t)hi << 32));
+	//report_capability(pinbased, 5, lo, hi);
+	
+	pr_info("\n");
+
+	if(!((hi>>23)&& 1))
+	{
+		/* Pinbased controls */
+		rdmsr(IA32_VMX_PINBASED_CTLS, lo, hi);
+		pr_info("Pinbased Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(pinbased, 5, lo, hi);
+
+		pr_info("\n");
+		
+		/* Procbased controls */
+		rdmsr(IA32_VMX_PROCBASED_CTLS, lo, hi);
+		pr_info("Procbased Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(procbased, 21, lo, hi);
+
+		pr_info("\n");
+		
+		if((hi>>31)&& 1)
+		{
+			/* Procbased_ctls2 controls */
+			rdmsr(IA32_VMX_PROCBASED_CTLS2, lo, hi);
+			pr_info("Procbased_ctls2 Controls MSR: 0x%llx\n",
+				(uint64_t)(lo | (uint64_t)hi << 32));
+			report_capability(procbased_ctls2, 23, lo, hi);
+
+			pr_info("\n");
+		}
+		
+		/* Exit controls */
+		rdmsr(IA32_VMX_EXIT_CTLS, lo, hi);
+		pr_info("Exit Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(exit, 11, lo, hi);
+
+		pr_info("\n");
+		
+		/* Entry controls */
+		rdmsr(IA32_VMX_ENTRY_CTLS, lo, hi);
+		pr_info("Entry Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(entry, 9, lo, hi);
+	
+	}
+	else
+	{
+		/* True Pinbased controls */
+		rdmsr(IA32_VMX_TRUE_PINBASED_CTLS, lo, hi);
+		pr_info("Pinbased Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(pinbased, 5, lo, hi);
+
+		pr_info("\n");
+		
+		/* True Procbased controls */
+		rdmsr(IA32_VMX_TRUE_PROCBASED_CTLS, lo, hi);
+		pr_info("Procbased Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(procbased, 21, lo, hi);
+		
+		pr_info("\n");
+		
+		/* True Exit controls */
+		rdmsr(IA32_VMX_TRUE_EXIT_CTLS, lo, hi);
+		pr_info("Exit Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(exit, 11, lo, hi);
+
+		pr_info("\n");
+		
+		/* True Entry controls */
+		rdmsr(IA32_VMX_TRUE_ENTRY_CTLS, lo, hi);
+		pr_info("Entry Controls MSR: 0x%llx\n",
+			(uint64_t)(lo | (uint64_t)hi << 32));
+		report_capability(entry, 9, lo, hi);
+	}
+
+
+}
