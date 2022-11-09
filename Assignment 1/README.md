@@ -63,7 +63,7 @@ After this your linux system is ready to run the setup. After reboot you will ne
 
 Steps to run the program:
 
-Step-1 :
+Step-1 : Installing Git
 
 First you will need to install git in your system
 
@@ -79,6 +79,38 @@ If you already have git on your system then you can type
 
 You can reinstall git by using 
 - sudo apt-get update
+
+Step-2 : Entering the root user to avoid permission denied issue
+
+Now you will need to be in the base user mode of your linux system. You can do this by typing
+- cd
+
+Now enter the root user to make sure you dont get any permission error. Type the command
+
+- sudo -s
+
+To exit the root mode you can type
+- exit
+
+Continue to step 3 when you enter the root user mode
+
+Step-3 : Cloning the linux repo 
+
+After the first step you want to clone the linux git repo into your home directory. You can do it by using the below command
+
+- git clone https://github.com/torvalds/linux.git
+
+I am including my edited and configured git repo in my assignment git, but all systems are different and there is a chance that if you download an already configured kernel then it wont work so this is what i will recommend
+
+Cloning the whole git repo will take some time depending on your internet speed. After the cloning is finished, you can type the below code and enter into the folder
+
+- cd linux
+
+After this, we can start the configuration
+
+
+
+
 
 
 
