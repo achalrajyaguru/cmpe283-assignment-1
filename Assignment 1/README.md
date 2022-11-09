@@ -106,7 +106,64 @@ Cloning the whole git repo will take some time depending on your internet speed.
 
 - cd linux
 
-After this, we can start the configuration
+After this, we can start the configuration of our linux kernel
+
+Step 4: Install all the important libraries and make changes to the kernel config file
+
+Start installing the below mentioned libraries. While installing them, i faced a few errors . I will mention how i solved them and attach important links and documentation. I am mentioning all the installation code in no particular order out of memory.
+
+
+
+- sudo apt-get install libncurses-dev
+- 
+- sudo apt install htop
+- sudo apt-get update
+- sudo apt-get upgrade
+- sudo apt-get install build-essential
+- sudo apt-get install libelf-dev
+- sudo apt-get install flex
+- sudo apt-get install bison
+- sudo apt-get install libncurses5-dev gcc make git exuberant-ctags bc libssl-dev
+- sudo apt install dwarves
+- make 
+(while executing make you may see an error, if so then execute the below code)
+
+- make oldconfig
+- make prepare
+
+(while executing make oldconfig you will have to press y on a lot of installation prompts, to avoid this enter the below code, it will automatically answer all the questions)
+
+- yes "" | make oldconfig
+
+Reference Source: https://serverfault.com/questions/116299/automatically-answer-defaults-when-doing-make-oldconfig-on-a-kernel-tree
+
+After this run the below code
+
+- make oldconfig && make prepare
+
+Now, type in
+
+- make menuconfig
+
+It will open a menu. Usually this menu is correct but you want to make sure that Load modules is selected to yes before moving on further. Save the setting in the same .config file and press Esc twice.
+
+- make
+
+- make modules
+
+(There is a chance that you might face a missing certificate error. To solve it, you will have to navigate into the kconfig file in your linux folder. Here you will have to comment out the code for config System_Key_List and config System_key_Rings. Doing this will get rid of the certificate error)
+
+- make modules_install
+
+- make install
+
+- make all
+
+Following these steps has helped me get the results, I have mentioned the 3 big errors which i faced, the libraries which we have installed will help us avoid any future error which i faced during setup
+
+
+
+
 
 
 
