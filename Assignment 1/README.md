@@ -13,5 +13,11 @@
 
 #### Answers:
 
- 1.
+ 1. 
  
+ - Created a local clone of the Linux Kernel by downloading and building the necessary modules and libraries.
+ - Added the custom logic to the cmpe283-1.c code in order to enable our system to read and output the capabilities of the various MSRs.
+ - After importing the module and outputting the kernel buffer, I staged and committed the cmpe283-1.c code file and Makefile.
+ - Created a thorough diff file was created when the modifications were committed to the repository.
+ - Tested the device to see whether it could recognize features and support VMX virtualization.
+ - Tested and confirmed the code's functioning by contrasting it with the example output provided.
