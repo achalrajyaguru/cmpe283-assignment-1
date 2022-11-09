@@ -42,4 +42,4 @@
  - external ip address: 34.94.23.23
  - internal ip address: 10.168.0.3
 
- 
+ ![alt text](http://url/to/Screen Shot 2022-11-08 at 7.57.16 PM.png)
