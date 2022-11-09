@@ -232,45 +232,7 @@ This will help you avoid any merge conflicts.
 
 #### Output:
 
-[ 9517.403597] [ 9517.403602]
-[ 9517.403605]
-[ 9517.403610] [ 9517.403613] [ 9517.403617] [ 9517.403620] [ 9517.403623] [ 9517.403626]
-[ 9517.403630] [ 9517.403634] [ 9517.403637] [ 9517.403640] [ 9517.403643] [ 9517.403645] [ 9517.403648] [ 9517.403651] [ 9517.403654] [ 9517.403657] [ 9517.403661] [ 9517.403664] [ 9517.403667] [ 9517.403670] [ 9517.403673] [ 9517.403676]
-CMPE 283 Assignment 1 Module Start Basic Controls MSR: 0xda040000000012
-True Controls capability is set
-True Pinbased Controls MSR: 0x7f00000016
-External Interrupt Exiting: Can set=Yes, Can clear=Yes
-NMI Exiting: Can set=Yes, Can clear=Yes
-Virtual NMIs: Can set=Yes, Can clear=Yes
-Activate VMX Preemption Timer: Can set=Yes, Can clear=Yes Process Posted Interrupts: Can set=No, Can clear=Yes
-True Procbased Controls MSR: 0xfff9fffe04006172 Interrupt-window: Can set=Yes, Can clear=Yes Use TSC offsetting: Can set=Yes, Can clear=Yes HLT exiting: Can set=Yes, Can clear=Yes INVLPG exiting: Can set=Yes, Can clear=Yes MWAIT exiting: Can set=Yes, Can clear=Yes RDPMC exiting: Can set=Yes, Can clear=Yes RDTSC exiting: Can set=Yes, Can clear=Yes CR3-load exiting: Can set=Yes, Can clear=Yes CR3-store exiting: Can set=Yes, Can clear=Yes CR8-load exiting: Can set=Yes, Can clear=Yes CR8-store exiting: Can set=Yes, Can clear=Yes Use TPR shadow: Can set=Yes, Can clear=Yes NMI-window exiting: Can set=Yes, Can clear=Yes MOV-DR exiting: Can set=Yes, Can clear=Yes Unconditional I/O: Can set=Yes, Can clear=Yes
-[ 9517.403680] [ 9517.403683] [ 9517.403686] [ 9517.403689] [ 9517.403692] [ 9517.403696]
-[ 9517.403700] [ 9517.403703] [ 9517.403707] [ 9517.403710] [ 9517.403714] [ 9517.403717] [ 9517.403720] [ 9517.403723] [ 9517.403750] [ 9517.403765] [ 9517.403774] [ 9517.403787]
-[ 9517.403817] [ 9517.403830] [ 9517.403842] [ 9517.403855] [ 9517.403869] [ 9517.403881] [ 9517.403898] [ 9517.403907] [ 9517.403919] [ 9517.403931] [ 9517.403944]
-Use I/O bitmaps: Can set=Yes, Can clear=Yes
-Monitor trap flag: Can set=Yes, Can clear=Yes
-Use MSR Bitmaps: Can set=Yes, Can clear=Yes MONITOR exiting: Can set=Yes, Can clear=Yes
-PAUSE exiting: Can set=Yes, Can clear=Yes
-Activate secondary controls: Can set=Yes, Can clear=Yes
-True Exit Controls MSR: 0x7fffff00036dfb
-Save debug controls: Can set=Yes, Can clear=Yes
-Host addressspace size: Can set=Yes, Can clear=Yes
-Load IA32_PERF_GLOB AL_CTRL: Can set=Yes, Can clear=Yes Acknowledge interrupt on exit: Can set=Yes, Can clear=Yes
-Save IA32_PAT: Can set=Yes, Can clear=Yes
-Load IA32_PAT: Can set=Yes, Can clear=Yes
-Save IA32_EEFR: Can set=Yes, Can clear=Yes
-Load IA32_EFER: Can set=Yes, Can clear=Yes
-Save VMXpreemption timer value: Can set=Yes, Can clear=Yes Clear IA32_BNDCFGS: Can set=No, Can clear=Yes
-Conceal VM exits from Intel PT: Can set=No, Can clear=Yes
-True Entry Controls MSR: 0xffff000011fb
-Load debug controls: Can set=Yes, Can clear=Yes
-IA-32e mode guest: Can set=Yes, Can clear=Yes
-Entry to SMM: Can set=Yes, Can clear=Yes
-Deactivate dual-monitor treatment: Can set=Yes, Can clear=Yes Load IA32_PERF_GLOBAL_CTRL: Can set=Yes, Can clear=Yes Load IA32_PAT: Can set=Yes, Can clear=Yes
-Load IA32_EFER: Can set=Yes, Can clear=Yes
-Load IA32_BNDCFGS: Can set=No, Can clear=Yes
-Conceal VM entries from Intel PT: Can set=No, Can clear=Yes
-CMPE 283 Assignment 1 Module Exits
+
 
 
 That's all for this assignment, if you face any errors then you can contact me on my linkedin page and shoot me a text, I will try to help if I can. What I would recommend is to google the error code first. In linux, if you face an error then there is a 80% chance that the solution is already available on the internet because of how big the community is :-)
