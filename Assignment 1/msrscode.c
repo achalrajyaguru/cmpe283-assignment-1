@@ -253,3 +253,28 @@ detect_vmx_features(void)
 
 
 }
+
+//coding module entry points
+
+int
+init_module(void)
+{
+	printk(KERN_INFO "Module Start\n");
+
+	detect_vmx_features();
+
+	/* 
+	 * A non 0 return means init_module failed; module can't be loaded. 
+	 */
+	cleanup_module();
+	return 0;
+}
+
+//cleanup module
+
+void
+cleanup_module(void)
+{
+	printk(KERN_INFO "Module Exits\n");
+}
+
