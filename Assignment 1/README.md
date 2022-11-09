@@ -39,10 +39,9 @@
  
  - root user id: achal
  - root user password: macbookpro
- - external ip address: 34.94.23.23
+ - external ip address: 35.236.56.100
  - internal ip address: 10.168.0.3
 
- ![alt text](http://url/to/gcpserver.png)
 
 I have attached a screenshot for the specifications for the isntance if you want to replicate it for yourself in the future. If you wish to access it with NoMachine then make sure to add firewall acceptions in the VPC network security options because the firewall wont allow access to the instance otherwise. I will mention a video link which will help you setup your own GCP instance.
 
@@ -115,7 +114,6 @@ Start installing the below mentioned libraries. While installing them, i faced a
 
 
 - sudo apt-get install libncurses-dev
-- 
 - sudo apt install htop
 - sudo apt-get update
 - sudo apt-get upgrade
@@ -212,6 +210,8 @@ Step-9: Creating a diff file
 We create a diff file inorder to compare changes from our original file and new file. They are widely used to get difference between the original file and the updated file.
 
 - git diff HEAD~1 > msrscode.diff
+
+
 Step-10: Pusing the code to github
 
 Here you can use an external software like GitKraken or Source tree to push the code. The easiest way I have found is to push it with terminal.
