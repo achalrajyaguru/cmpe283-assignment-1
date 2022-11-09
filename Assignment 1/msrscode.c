@@ -35,3 +35,15 @@ struct capability_info {
 	uint8_t bit;
 	const char *name;
 };
+
+
+// adding pinased capability info
+
+struct capability_info pinbased[5] =
+{
+	{ 0, "External Interrupt Exiting" },
+	{ 3, "NMI Exiting" },
+	{ 5, "Virtual NMIs" },
+	{ 6, "Activate VMX Preemption Timer" },
+	{ 7, "Process Posted Interrupts" }
+};
