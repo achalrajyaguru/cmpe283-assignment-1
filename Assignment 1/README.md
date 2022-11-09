@@ -33,7 +33,7 @@
  The linux instance is still active on my GCP account and can be accessed until 10th November. I will mention the steps to remotely access the instance. The installation steps are gonna be independept of the choice of platform. The code with run on both GCP and linux system.
 
 
- Steps to access GCP:
+ Steps to access GCP (only available until 10th Nov):
 
  Credentials:
  
@@ -43,3 +43,24 @@
  - internal ip address: 10.168.0.3
 
  ![alt text](http://url/to/gcpserver.png)
+
+I have attached a screenshot for the specifications for the isntance if you want to replicate it for yourself in the future. If you wish to access it with NoMachine then make sure to add firewall acceptions in the VPC network security options because the firewall wont allow access to the instance otherwise. I will mention a video link which will help you setup your own GCP instance.
+
+- YouTube video link: https://www.youtube.com/watch?v=UYLA_fFdciA
+
+In the video I have share above the instructor is using an amd system for configuration, for our system we need to setup an x86 based ubuntu, so the only necessary change is to pick an x86 system. YOu will need a NoMachine to access this linux instance. You can skip to 8:56 in the video to start with NoMachine setup.
+
+Steps to access on an intel based laptop with Ubuntu:
+
+- For this step you need a laptop with Ubuntu installed. After logging into the laptop run the following 3 commands to setup up the laptop for the next steps.
+
+	1. sudo apt-get update
+	2. sudo apt-get upgrade
+	3. sudo reboot
+
+After this your linux system is ready to run the setup.
+
+
+Steps to 
+
+
