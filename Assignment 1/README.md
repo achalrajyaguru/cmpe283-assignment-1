@@ -33,7 +33,7 @@
  The linux instance is still active on my GCP account and can be accessed until 10th November. I will mention the steps to remotely access the instance. The installation steps are gonna be independept of the choice of platform. The code with run on both GCP and linux system.
 
 
- <u> Steps to access GCP (only available until 10th Nov): </u>
+ Steps to access GCP (only available until 10th Nov): 
 
  Credentials:
  
@@ -50,7 +50,7 @@ I have attached a screenshot for the specifications for the isntance if you want
 
 In the video I have share above the instructor is using an amd system for configuration, for our system we need to setup an x86 based ubuntu, so the only necessary change is to pick an x86 system. YOu will need a NoMachine to access this linux instance. You can skip to 8:56 in the video to start with NoMachine setup.
 
-<u> Steps to access on an intel based laptop with Ubuntu: </u>
+Steps to access on an intel based laptop with Ubuntu: 
 
 - For this step you need a laptop with Ubuntu installed. After logging into the laptop run the following 3 commands to setup up the laptop for the next steps.
 
@@ -58,9 +58,28 @@ In the video I have share above the instructor is using an amd system for config
 	2. sudo apt-get upgrade
 	3. sudo reboot
 
-After this your linux system is ready to run the setup.
+After this your linux system is ready to run the setup. After reboot you will need to login in to your linux system.
 
 
-Steps to 
+Steps to run the program:
+
+Step-1 :
+
+First you will need to install git in your system
+
+- sudo apt-get install git-all
+
+You can also try 
+
+- sudo apt install git
+
+If you already have git on your system then you can type
+
+- git --version
+
+You can reinstall git by using 
+- sudo apt-get update
+
+
 
 
