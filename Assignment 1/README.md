@@ -36,9 +36,10 @@
  Steps to access GCP:
 
  Credentials:
- root user id: achal
- root user password: macbookpro
- external ip address: 34.94.23.23
- internal ip address: 10.168.0.3
+ 
+ - root user id: achal
+ - root user password: macbookpro
+ - external ip address: 34.94.23.23
+ - internal ip address: 10.168.0.3
 
  
