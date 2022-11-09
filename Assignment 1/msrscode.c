@@ -47,3 +47,32 @@ struct capability_info pinbased[5] =
 	{ 6, "Activate VMX Preemption Timer" },
 	{ 7, "Process Posted Interrupts" }
 };
+
+
+// adding procbased controls
+
+struct capability_info procbased[21] =
+{
+	{2 , "Interrupt-window" },
+	{3 , "Use TSC offsetting" },
+	{7 , "HLT exiting" },
+	{9 , "INVLPG exiting" },
+	{10 , "MWAIT exiting" },
+	{11 , "RDPMC exiting" },
+	{12 , "RDTSC exiting" },
+	{15 , "CR3-load exiting" },
+	{16 , "CR3-store exiting" },
+	{19 , "CR8-load exiting" },
+	{20 , "CR8-store exiting" },
+	{21 , "Use TPR shadow" },
+	{22 , "NMI-window exiting" },
+	{23 , "MOV-DR exiting" },
+	{24 , "Unconditional I/O" },
+	{25 , "Use I/O bitmaps" },
+	{27 , "Monitor trap flag" },
+	{28 , "Use MSR Bitmaps" },
+	{29 , "MONITOR exiting" },
+	{30 , "PAUSE exiting" },
+	{31 , "Activate secondary controls" }
+};
+
