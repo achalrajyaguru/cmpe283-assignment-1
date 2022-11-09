@@ -21,3 +21,24 @@
  - Created a thorough diff file was created when the modifications were committed to the repository.
  - Tested the device to see whether it could recognize features and support VMX virtualization.
  - Tested and confirmed the code's functioning by contrasting it with the example output provided.
+ - Simulating the responses to the report's questions.
+ - Built all kernel modules and kernel
+ - Trouble shooted the errors faced while setting up the environment
+ - Setup the Linux system on GCP and accessed it with nomachine desktop app
+
+ 2. 
+
+ Before starting the coding portion I decided to try out other options. Initially I started the assignment with GCP by creating an instance and accessing it with nomachine on my desktop. It worked for first 2 days but after a reboot I wasn't able to access the instance from nomachine and was facing a SSH key transfer error. I wasn't able to get it running again so I continued with a different linux system. I dual booted ubuntu into one of my old windows laptop. 
+
+ The linux instance is still active on my GCP account and can be accessed until 10th November. I will mention the steps to remotely access the instance. The installation steps are gonna be independept of the choice of platform. The code with run on both GCP and linux system.
+
+
+ Steps to access GCP:
+
+ Credentials:
+ root user id: achal
+ root user password: macbookpro
+ external ip address: 34.94.23.23
+ internal ip address: 10.168.0.3
+
+ 
