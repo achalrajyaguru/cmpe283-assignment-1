@@ -76,3 +76,48 @@ struct capability_info procbased[21] =
 	{31 , "Activate secondary controls" }
 };
 
+struct capability_info procbased_ctls2[23] =
+{
+	{ 0, "Virtualize APIC accesses" },
+	{ 1, "Enable EPT" },
+	{ 2, "Descriptor-table exiting" },
+	{ 3, "Enable RDTSCP" },
+	{ 4, "Virtualize x2APIC mode" },
+	{ 5, "Enable VPID" },
+	{ 6, "WBINVD exiting" },
+	{ 7, "Unrestricted guest" },
+	{ 8, "APIC-register virtualization" },
+	{ 9, "Virtual-interrupt delivery" },
+	{ 10, "PAUSE-loop exiting" },
+	{ 11, "RDRAND exiting" },
+	{ 12, "Enable INVPCID" },
+	{ 13, "Enable VM functions" },
+	{ 14, "VMCS shadowing" },
+	{ 15, "Enable ENCLS exiting" },
+	{ 16, "RDSEED exiting" },
+	{ 17, "Enable PML" },
+	{ 18, "EPT-violation" },
+	{ 19, "Conceal VMX nonroot operation from Intel PT" },
+	{ 20, "Enable XSAVES/XRSTORS" },
+	{ 22, "Mode-based execute control for EPT" },
+	{ 25, "Use TSC scaling" }
+};
+
+
+
+//adding entry controls 
+
+struct capability_info entry[9] =
+{
+	{ 2, "Load debug controls" },
+	{ 9, "IA-32e mode guest" },
+	{ 10, "Entry to SMM" },
+	{ 11, "Deactivate dual-monitor treatment" },
+	{ 13, "Load IA32_PERF_GLOBAL_CTRL" },
+	{ 14, "Load IA32_PAT" },
+	{ 15, "Load IA32_EFER" },
+	{ 16, "Load IA32_BNDCFGS" },
+	{ 17, "Conceal VM entries from Intel PT" }
+};
+
+
