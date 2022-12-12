@@ -64,6 +64,10 @@ Exit type 30 - I/O instruction
 Exit type 32 - WRMSR
 Exit type 48 - EPT violation
 
+### Number of exit status:
+
+Nope, the number of exits does not increase at a stable rate.I have a lot exits on External Interrrupt Exit, Interrupt Window Exit, Control-register access exits, and IO Exits(attched some outputs below). In my case, total exits is 515,155 after boot up by using dmesg.
+
 
 
 
