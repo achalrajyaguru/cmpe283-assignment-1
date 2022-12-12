@@ -6,6 +6,8 @@
 ### Term: Fall22
 
 
+## Requirements
+Have a running copnfiguration from assignment2.
 
 ## Tasks completed
 
