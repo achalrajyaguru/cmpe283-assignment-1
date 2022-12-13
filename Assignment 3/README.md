@@ -12,7 +12,7 @@ Have a running copnfiguration from assignment2.
 ## Tasks completed
 
 - Added feature to detect the time spent inside VMM for processing all exits for CPUID 0x4ffffffd leaf node.
-- Created an inner VM and installed required cpuid packages (done together).
+- Created an inner VM and installed required cpuid packages 
 - Built and loaded the kernel again for outer VM.
 - Tested the feature by running cpuid command in inner VM.
 - Captured output in system message log.
